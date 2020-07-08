@@ -4,7 +4,7 @@ Description
 This application was built using Javascript, HTML5, CSS3, Bootstrap 4. A timer-based quiz application that stores high scores client-side.
 
 Installation
-Please visit the deployed project at: https://pratyusharaghupatruni.github.io/quiz-js/
+Please visit the deployed project at: https://pratyusharaghupatruni.github.io/code-quiz/
 
 Usage
 Use this quiz to test your basic code knowledge. See the requirements below.
