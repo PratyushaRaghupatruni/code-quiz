@@ -69,7 +69,11 @@ input[type="text" i] {
     display: none; 
     
 }
-
+#msg{
+    color:purple;
+    font-size: large;
+    font-weight: bold;
+}
 @media screen and (max-width: 576px) { 
 
   .navbar{
