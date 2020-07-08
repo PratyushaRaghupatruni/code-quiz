@@ -31,8 +31,7 @@ button{
   /*box-model*/ 
     row-gap:10px;
     margin:4px;
-    width: 200px;
-      
+    width: 200px;   
 }
 
 button:hover{
@@ -40,6 +39,12 @@ button:hover{
     transition-duration: 0.4s;
     color:purple !important;
     background-color: thistle !important;
+}
+button:focus {
+    outline: none !important;
+    outline-color: none !important;
+    outline-style: none !important;
+    outline-width: none !important;
 }
 .start{
     /*positioning*/
