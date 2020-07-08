@@ -57,6 +57,7 @@ var choiceAEl = document.getElementById("A");
 var choiceBEl = document.getElementById("B");
 var choiceCEl = document.getElementById("C");
 var choiceDEl = document.getElementById("D");
+var feedbackEl = document.getElementById("feedback");
 
 //declaring the variables
 var score = 0;
@@ -100,8 +101,9 @@ function endGame() {
     start.style.display = 'none';
     //to display the scores onto the webpage
     scoresEl.innerHTML = score;
-
 }
+
+//funtion to display when Initals cannot be empty
 function dispalyMessage(type, message) {
     msgDiv.textContent = message;
     msgDiv.setAttribute("class", type);
@@ -115,6 +117,7 @@ function setscore() {
         userInitials: initialEl.value,
         userScore: scoresEl.innerText,
     }
+    //validating the initials
     if (initialEl.value !== "") {
         localStorage.setItem("user", JSON.stringify(userData));
         getscore();
@@ -126,14 +129,15 @@ function setscore() {
 
 }
 
-
+//function to display the highscores
 function getscore() {
     submitpageEl.style.display = 'none';
     displayhighscoreEl.style.display = 'flex';
+    //to display highscore
     displayhighscoreEl.setAttribute("style", "display:flex;justify-content:center;align-items:center;");
     start.style.display = 'none';
     questionbodyEl.style.display = 'none';
-    msgDiv.textContent='';
+    msgDiv.textContent = '';
 
     var lastUser = JSON.parse(localStorage.getItem("user"));
 
@@ -146,7 +150,7 @@ function getscore() {
 function clearScore() {
     //clearing the local storage
     localStorage.setItem("user", JSON.stringify(""));
-    //goto startpage again
+    //goto start again
     tryagain();
 }
 
@@ -162,6 +166,7 @@ function tryagain() {
     //displaying the timer on the page
     document.getElementById("time").innerHTML = timer;
     displayhighscoreEl.style.display = 'none';
+    //going back to starting page
     start.setAttribute("style", "display:flex;justify-content:center;align-items:center;");
     questionbodyEl.style.display = 'none';
     submitpageEl.style.display = 'none';
@@ -170,6 +175,7 @@ function tryagain() {
 //function for generating questions
 function renderQuestion() {
     start.style.display = 'none';
+    //to display the questions for quiz
     questionbodyEl.setAttribute("style", "display:flex;justify-content:center;align-items:center;");
     displayhighscoreEl.style.display = 'none';
     submitpageEl.style.display = 'none';
@@ -185,16 +191,22 @@ function renderQuestion() {
         choiceAEl.innerHTML = questions[currentQuestion].choiceA;
         choiceBEl.innerHTML = questions[currentQuestion].choiceB;
         choiceCEl.innerHTML = questions[currentQuestion].choiceC;
-        choiceDEl.innerHTML = questions[currentQuestion].choiceD;
+       choiceDEl.innerHTML = questions[currentQuestion].choiceD;   
     }
+    
 }
 //function to check the answer and add the score if it is correct and reduce the time if it is wrong
 function checkAnswer(answer) {
     if (answer == questions[currentQuestion].correct) {
+        feedbackEl.innerHTML = "You are Correct!";
         score = score + 20;
+       
+        
     }
     else {
+        feedbackEl.innerHTML = " You are Wrong!" ;
         timeLeft = timeLeft - 15;
+        
     }
     //goto question function
     renderQuestion();

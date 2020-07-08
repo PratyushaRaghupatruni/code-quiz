@@ -16,6 +16,9 @@ body{
     /*visual*/
     font-size:30px;
     color:white;
+    border-bottom: paleturquoise;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 button{
     /*visual*/
@@ -31,6 +34,7 @@ button{
   /*box-model*/ 
     row-gap:10px;
     margin:4px;
+    margin-top:20px;
     width: 200px;   
 }
 
@@ -41,6 +45,7 @@ button:hover{
     background-color: thistle !important;
 }
 button:focus {
+    /*visual*/
     outline: none !important;
     outline-color: none !important;
     outline-style: none !important;
@@ -74,11 +79,24 @@ input[type="text" i] {
     display: none; 
     
 }
+.fade-out{
+    animation:fadeOut 3s ;
+}
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
 #msg{
     color:purple;
     font-size: large;
     font-weight: bold;
 }
+
 @media screen and (max-width: 576px) { 
 
   .navbar{
