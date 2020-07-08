@@ -198,13 +198,13 @@ function renderQuestion() {
 //function to check the answer and add the score if it is correct and reduce the time if it is wrong
 function checkAnswer(answer) {
     if (answer == questions[currentQuestion].correct) {
-        feedbackEl.innerHTML = "You are Correct!";
+       // feedbackEl.innerHTML = "You are Correct!"; trying to add bonus!
         score = score + 20;
        
         
     }
     else {
-        feedbackEl.innerHTML = " You are Wrong!" ;
+        //feedbackEl.innerHTML = " You are Wrong!" ; trying to add bonus!
         timeLeft = timeLeft - 15;
         
     }
