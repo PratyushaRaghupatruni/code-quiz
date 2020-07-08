@@ -9,7 +9,7 @@ Please visit the deployed project at: https://pratyusharaghupatruni.github.io/qu
 Usage
 Use this quiz to test your basic code knowledge. See the requirements below.
 
-![alt text](./assets/images/Screen Shot 2020-07-07 at 11.49.04 PM.png)
+![alt text](https://github.com/PratyushaRaghupatruni/code-quiz/blob/master/assets/images/Screen%20Shot%202020-07-07%20at%2011.49.04%20PM.png)
 
 Instructions
 Play proceeds as follows:
